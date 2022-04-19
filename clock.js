@@ -70,11 +70,17 @@ function break_time(x, y) {
 
     function minutesTimer() {
         minutes = minutes - 1;
+        if(minutes < 10) { 
+            minutes = '0' + minutes;
+        }
         document.getElementById('minutes').innerHTML = minutes;
     }
 
     function secondsTimer() {
         seconds = seconds - 1;
+        if(seconds < 10) { 
+            seconds = '0' + seconds;
+        }
         document.getElementById('seconds').innerHTML = seconds;
 
         if (seconds <= 0) {
